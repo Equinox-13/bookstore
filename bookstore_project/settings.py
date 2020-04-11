@@ -121,10 +121,28 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+# URL that we can use to reference static files
 STATIC_URL = '/static/'
+
+# location of static files in local development environment
+# It can be sprinkled across various  locations so a list is used
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+
+# location of static files for production environment
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# tells Django how to look for static file directories
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
+
+
 
 # Use custom user model instead of default user model
 AUTH_USER_MODEL = 'users.CustomUser'
+
+
 
 # Redirects to home page after login
 LOGIN_REDIRECT_URL = 'home'
