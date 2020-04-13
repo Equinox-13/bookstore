@@ -153,7 +153,8 @@ AUTH_USER_MODEL = 'users.CustomUser'
 LOGIN_REDIRECT_URL = 'home'
 
 # Redirects to home page after logout
-LOGOUT_REDIRECT_URL = 'home'
+# LOGOUT_REDIRECT_URL = 'home'
+ACCOUNT_LOGOUT_REDIRECT = 'home'
 
 # django-crispy-forms provides pre-styled forms for us
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
