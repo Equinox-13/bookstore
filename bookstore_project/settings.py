@@ -156,6 +156,12 @@ LOGIN_REDIRECT_URL = 'home'
 # LOGOUT_REDIRECT_URL = 'home'
 ACCOUNT_LOGOUT_REDIRECT = 'home'
 
+# Remembers session info always (checkbox does not appear)
+ACCOUNT_SESSION_REMEMBER = True
+
+# Disables 2 times entry of password
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
+
 # django-crispy-forms provides pre-styled forms for us
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
