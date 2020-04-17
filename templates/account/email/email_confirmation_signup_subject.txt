@@ -1,1 +1,4 @@
-Please change your password
+{% load i18n %}
+{% autoescape off %}
+{% blocktrans %}Confirm Your Sign Up{% endblocktrans %}
+{% endautoescape %}
