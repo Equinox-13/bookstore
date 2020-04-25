@@ -30,4 +30,5 @@ urlpatterns = [
     path('', include('pages.urls')),
     # path('accounts/', include('users.urls')),
     path('books/', include('books.urls')),
+    path('orders/', include('orders.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
