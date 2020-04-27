@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.contrib.auth.mixins import (
     LoginRequiredMixin,
     PermissionRequiredMixin
@@ -30,3 +31,14 @@ class SearchResultsListView(ListView):
     model = Book
     context_object_name = 'book_list'
     template_name = 'books/search_results.html'
+
+    # Basic filtering using QuerySet
+    # queryset = Book.objects.filter(title__icontains='beginners')
+
+    def get_queryset(self):
+        """
+        Filtering using Q objects
+        """
+        return Book.objects.filter(Q(title__icontains='beginners') |
+            Q(title__icontains='api'))
+
