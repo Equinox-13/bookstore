@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # Third-party
     'crispy_forms',
     'allauth.account',
+    'debug_toolbar',
 
     # Local
     'users.apps.UsersConfig',
@@ -58,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'bookstore_project.urls'
@@ -186,3 +188,6 @@ DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# django-debug-toolbar
+INTERNAL_IPS = ['127.0.0.1',]
