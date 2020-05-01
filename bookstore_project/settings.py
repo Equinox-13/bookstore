@@ -197,3 +197,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # django-debug-toolbar
 INTERNAL_IPS = ['127.0.0.1',]
+
+# Stripe
+STRIPE_TEST_PUBLISHABLE_KEY=os.environ.get('STRIPE_TEST_PUBLISHABLE_KEY')
