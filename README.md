@@ -12,3 +12,9 @@ An Online Bookstore
 
 ## Screenshots
 ![](images/homepage.png)
+![](images/signup.png)
+![](images/login.png)
+![](images/bookslist.png)
+![](images/detail.png)
+![](images/search_results.png)
+![](images/order.png)
