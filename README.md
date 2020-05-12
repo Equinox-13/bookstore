@@ -10,3 +10,5 @@ An Online Bookstore
 - Payment through stripe.
 - Search functionality.
 
+## Screenshots
+![](images/homepage.png)
